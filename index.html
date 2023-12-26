@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<!-- Coding By Royal 420 KE -->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Animated Christmas Tree </title>
+    <link rel="stylesheet" href="Elements/main.css">
+    <!--Animated snow-->
+    <script defer src="https://app.embed.im/snow.js"></script>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="static/android-chrome-192x192.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!--Tree-->
+    <div class="tree">
+
+        <div class="top" style="--j:0;">
+
+            <span style="--i:0;"></span>
+
+            <span style="--i:1;"></span>
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:3;"></span>
+
+        </div>
+
+        <div class="top" style="--j:1;">
+
+            <span style="--i:0;"></span>
+
+            <span style="--i:1;"></span>
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:3;"></span>
+
+        </div>
+
+        <div class="top" style="--j:2;">
+
+            <span style="--i:0;"></span>
+
+            <span style="--i:1;"></span>
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:3;"></span>
+
+        </div>
+
+        <div class="top" style="--j:3;">
+
+            <span style="--i:0;"></span>
+
+            <span style="--i:1;"></span>
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:3;"></span>
+
+        </div>
+
+        <div class="bottom">
+
+            <span style="--i:0;"></span>
+
+            <span style="--i:1;"></span>
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:3;"></span>
+
+        </div>
+
+        <span class="shadow"></span>
+
+    </div>
+    <!--Counter-->
+    <div class="textcounter text-center">
+        <h1 class="Textstyle">Christmas Countdown 2023</h1>
+        <br>
+        <!--Counter-->
+        <div class="counter" id="counters"></div>
+        <br><br>
+        <p class="credits">Designed by AugustDev &nbsp; <i class="fa-solid fa-gift fa-beat" style="color: #ff0000;"></i></p>
+        <!--Counter script-->
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
+    
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+    
+                // Get the current date and time
+                var now = new Date().getTime();
+    
+                // Calculate the remaining time
+                var distance = countDownDate - now;
+    
+                // Calculate days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Display the result in the element with id="counters"
+                document.getElementById("counters").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+    
+                // If the countdown is over, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("counters").innerHTML = "Merry Christmas!";
+                }
+            }, 1000);
+        </script>
+    </div>
+</body>
+
+<!--JavaScript area-->
+<script src="https://kit.fontawesome.com/fc8a02832e.js" crossorigin="anonymous"></script>
+</html>
